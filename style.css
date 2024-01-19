@@ -20,8 +20,8 @@ header {
 header::before {
   content: "";
   position: absolute;
-  top: 100;
-  left: 100;
+  top: 100px;
+  left: 100px;
   width: 40%;
   height: 25%;
   background-color: rgba(194, 167, 136, 0.8);
@@ -140,7 +140,7 @@ footer {
 #about-me {
   font-size: 23px;
   display: flex;
-  margin-left: -20; /* Make the container flush with the left-most side of the window */
+  margin-left: -20px; /* Make the container flush with the left-most side of the window */
   padding-left: 0; /* Remove any padding on the left */
   width: 100%;
 }
@@ -149,17 +149,23 @@ footer {
 }
 
 .mobile-app {
-  width: 100%; /* Set the width of the container */
+  position: relative;
+  width: 100%; /* Adjust as needed */
   height: 0;
-  padding-bottom: 56.25%; /* For a 16:9 aspect ratio video */
-  position: relative; /* Establish a new positioning context for children */
-  overflow: hidden; /* Prevent content from spilling outside the container */
+  padding-bottom: 56.25%; /* For a 16:9 aspect ratio */
+  overflow: hidden;
 }
 
 .mobile-app video {
-  position: absolute; /* Position the video within the .mobile-app container */
+  position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Make the video maintain its aspect ratio while fitting within its container */
+}
+.flex-item video {
   width: 100%; /* Make the video take up the full width of its container */
-  height: 100%; /* Make the video take up the full height of its container */
+  height: auto; /* Allow the height to adjust automatically */
+  object-fit: contain; /* Make the video maintain its aspect ratio while fitting within its container */
 }
