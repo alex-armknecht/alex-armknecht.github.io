@@ -20,8 +20,8 @@ header {
 header::before {
   content: "";
   position: absolute;
-  top: 100px;
-  left: 100px;
+  top: 100;
+  left: 100;
   width: 40%;
   height: 25%;
   background-color: rgba(194, 167, 136, 0.8);
@@ -140,7 +140,7 @@ footer {
 #about-me {
   font-size: 23px;
   display: flex;
-  margin-left: -20px; /* Make the container flush with the left-most side of the window */
+  margin-left: -20; /* Make the container flush with the left-most side of the window */
   padding-left: 0; /* Remove any padding on the left */
   width: 100%;
 }
