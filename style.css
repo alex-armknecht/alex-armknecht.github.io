@@ -149,7 +149,7 @@ footer {
   width: 100%;
 }
 
-.mobile-app {
+.demo {
   position: relative;
   width: 100%; /* Adjust as needed */
   height: 0;
@@ -157,7 +157,7 @@ footer {
   overflow: hidden;
 }
 
-.mobile-app video {
+.demo video {
   position: absolute;
   top: 0;
   left: 0;
@@ -182,7 +182,37 @@ footer {
   width: 60%; /* Adjust as needed */
   padding-left: 100px; /* Add some left padding */
 }
-
 .job h3 {
-  font-weight: bold;
+  font-size: 1.3em; /* Adjust as needed */
+  margin-bottom: 0.5em; /* Adjust as needed */
+  text-align: left; /* Align the text to the left */
+}
+
+.job h4 {
+  font-style: italic;
+  font-size: 1.5 em;
+  margin-top: 0.5em; /* Adjust as needed */
+  margin-bottom: 0.5em; /* Adjust as needed */
+  text-align: left; /* Align the text to the left */
+}
+
+.job h5 {
+  margin-top: 0.5em; /* Adjust as needed */
+  font-size: 1 em;
+  text-align: left; /* Align the text to the left */
+}
+
+.job ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: disc; /* Use disc-style bullets */
+}
+.job li {
+  display: list-item; /* Ensure list items appear on their own line */
+  text-align: left; /* Align the text to the left */
+  padding-left: 1em; /* Adjust as needed */
+  font-size: 1em; /* Adjust as needed */
+}
+.job ul li {
+  margin-bottom: 1em; /* Adjust as needed */
 }
