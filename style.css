@@ -139,6 +139,7 @@ footer {
 
 #about-me {
   font-size: 23px;
+  line-height: 1.5;
   display: flex;
   margin-left: -20; /* Make the container flush with the left-most side of the window */
   padding-left: 0; /* Remove any padding on the left */
@@ -168,4 +169,20 @@ footer {
   width: 100%; /* Make the video take up the full width of its container */
   height: auto; /* Allow the height to adjust automatically */
   object-fit: contain; /* Make the video maintain its aspect ratio while fitting within its container */
+}
+.work-experience {
+  display: flex;
+  flex-direction: row;
+  align-items: row;
+  text-align: row;
+  width: 85%;
+}
+
+.job {
+  width: 60%; /* Adjust as needed */
+  padding-left: 100px; /* Add some left padding */
+}
+
+.job h3 {
+  font-weight: bold;
 }
