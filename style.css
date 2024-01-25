@@ -23,18 +23,20 @@ header::before {
   position: absolute;
   top: 100;
   left: 100;
-  width: 40%;
-  height: 25%;
+  width: 700px;
+  height: 220px;
   background-color: rgba(194, 167, 136, 0.8);
   border-radius: 20px;
   z-index: 1;
 }
+
 
 header h1 {
   position: relative;
   z-index: 1;
   font-size: 3em;
   text-align: center;
+  
 }
 
 nav ul {
