@@ -141,7 +141,7 @@ section ul li a {
   padding: 20px;
   text-align: center;
   width: 300px; /* Set a width */
-  height: 450px; /* Set a height */
+  height: auto; /* Set a height */
   border-radius: 20px; /* Make the boxes rounded */
   background-color: rgba(1, 68, 33, 0.2); /* Change the background color */
   box-shadow: 5px 5px 10px rgba(0, 51, 26, 0.5); /* Add a shadow */
@@ -180,7 +180,7 @@ footer {
 .demo {
   position: relative;
   width: 100%; /* Adjust as needed */
-  height: 0;
+  height: auto;
   padding-bottom: 56.25%; /* For a 16:9 aspect ratio */
   overflow: hidden;
 }
@@ -190,14 +190,19 @@ footer {
   top: 0;
   left: 0;
   width: 100%;
-  max-height: 400px;
+  height: auto;
+  /* max-height: 400px; */
   object-fit: contain; /* Make the video maintain its aspect ratio while fitting within its container */
 }
 .flex-item video {
   width: 100%; /* Make the video take up the full width of its container */
-  /* height: auto;  */
-  max-height: 400px;
+  height: auto; 
   object-fit: contain; /* Make the video maintain its aspect ratio while fitting within its container */
+}
+.flex-item p {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 .work-experience {
   display: flex;
@@ -206,11 +211,7 @@ footer {
   text-align: row;
   width: 85%;
 }
-.flex-item p {
-  max-width: 100%;
-  object-fit: contain;
-  overflow: auto;
-}
+
 
 .job {
   width: 60%; /* Adjust as needed */
