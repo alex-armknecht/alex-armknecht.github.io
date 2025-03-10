@@ -211,17 +211,18 @@ footer {
 }
 .work-experience {
   display: flex;
-  flex-direction: row;
-  align-items: row;
-  text-align: row;
+  flex-direction: column; /* Change from row to column */
+  align-items: flex-start; /* Align items to the start (left) */
+  text-align: left; /* Ensure text aligns properly */
   width: 85%;
+  gap: 20px; /* Add space between job entries */
 }
-
 
 .job {
-  width: 60%; /* Adjust as needed */
-  padding-left: 100px; /* Add some left padding */
+  width: 100%; /* Make each job entry take full width */
+  padding-left: 0; /* Remove left padding */
 }
+
 .job h3 {
   font-size: 1.3em; /* Adjust as needed */
   margin-bottom: 0.5em; /* Adjust as needed */
