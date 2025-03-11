@@ -261,3 +261,38 @@ footer {
 html {
   scroll-behavior: smooth;
 }
+
+/* Ensure the coursework section uses flexbox and wraps items */
+#relevant-coursework ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the items when wrapping */
+  gap: 15px; /* Add space between buttons */
+  padding: 0;
+  list-style: none;
+}
+
+/* Make each list item flexible with a max width */
+#relevant-coursework li {
+  flex: 1 1 300px; /* Flexible size but won't shrink too much */
+  max-width: 300px; /* Prevents it from stretching too wide */
+}
+
+/* Ensure buttons fill their container */
+#relevant-coursework button {
+  width: 100%; /* Make buttons take full width of the container */
+  padding: 15px;
+  text-align: center;
+}
+
+/* Responsive design: stack buttons below each other */
+@media (max-width: 768px) {
+  #relevant-coursework ul {
+    flex-direction: column; /* Stack vertically */
+    align-items: center; /* Center the items */
+  }
+
+  #relevant-coursework li {
+    max-width: 100%; /* Allow full width on smaller screens */
+  }
+}
