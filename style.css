@@ -7,27 +7,14 @@ body {
 
 header {
   position: relative;
-  background-image: url("headerPic.jpeg");
-  background-size: cover;
-  background-position: center;
-  color: #ffffffa5;
+  background: url("headerPic.jpeg") center/cover;
+  color: #fff;
   padding: 300px;
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
   align-items: center;
-}
-
-header::before {
-  content: "";
-  position: absolute;
-  top: 100;
-  left: 100;
-  width: 700px;
-  height: 220px;
-  background-color: rgba(194, 167, 136, 0.8);
-  border-radius: 20px;
-  z-index: 1;
+  justify-content: space-between;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -36,7 +23,6 @@ header h1 {
   z-index: 1;
   font-size: 3em;
   text-align: center;
-  
 }
 
 nav ul {
@@ -58,22 +44,21 @@ nav ul li a {
   color: #fff;
   text-decoration: none;
 }
-nav li:hover {
+
+nav li:hover, .icon:hover, button:hover {
   transform: scale(1.1);
 }
 
 .icon {
   display: inline-block;
 }
-.icon:hover {
-  transform: scale(1.1);
-}
 
 main {
   padding: 20px;
 }
+
 h2 {
-  padding-bottom: 1em; /* Adjust as needed */
+  padding-bottom: 1em;
 }
 
 button {
@@ -84,13 +69,9 @@ button {
   color: rgb(230, 223, 223);
   font-size: 1em;
   cursor: pointer;
-  transition: transform 0.3s; /* Add a transition for smooth scaling */
+  transition: transform 0.3s;
   margin-bottom: 10px;
-  box-shadow: 5px 5px 10px rgba(55, 30, 0, 0.5); /* Add a shadow */
-}
-
-button:hover {
-  transform: scale(1.1); /* Make the button grow when hovered over */
+  box-shadow: 5px 5px 10px rgba(55, 30, 0, 0.5);
 }
 
 section {
@@ -110,16 +91,12 @@ section ul {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-section ul {
   display: flex;
   justify-content: space-between;
 }
 
 section ul li {
-  padding: 0 50px; /* Add padding to the left and right of each relevent courses */
-  
+  padding: 0 50px;
 }
 
 section ul li a {
@@ -127,8 +104,6 @@ section ul li a {
   text-decoration: none;
   font-weight: bold;
 }
-
-
 
 .flex-container {
   display: flex;
@@ -144,12 +119,11 @@ section ul li a {
   margin: 10px;
   padding: 20px;
   text-align: center;
-  max-width: 400px; /* Set a width */
-  max-height: 500px; 
-  border-radius: 20px; /* Make the boxes rounded */
-  background-color: rgba(1, 68, 33, 0.2); /* Change the background color */
-  box-shadow: 5px 5px 10px rgba(0, 51, 26, 0.5); /* Add a shadow */
-  
+  max-width: 400px;
+  max-height: 500px;
+  border-radius: 20px;
+  background-color: rgba(1, 68, 33, 0.2);
+  box-shadow: 5px 5px 10px rgba(0, 51, 26, 0.5);
 }
 
 @media (max-width: 600px) {
@@ -157,9 +131,10 @@ section ul li a {
     flex: 0 0 100%;
   }
 }
-.project-item img {
+
+.project-item img, .flex-item video {
   max-width: 100%;
-  max-height: 100%;
+  height: auto;
   object-fit: contain;
 }
 
@@ -174,19 +149,15 @@ footer {
   font-size: 20px;
   line-height: 1.5;
   display: flex;
-  margin-left: -20; /* Make the container flush with the left-most side of the window */
-  padding-left: 0; /* Remove any padding on the left */
   width: 100%;
-}
-#about-me ul {
-  width: 100%;
+  margin-left: -20px;
+  padding-left: 0;
 }
 
 .demo {
   position: relative;
-  width: 100%; /* Adjust as needed */
-  height: auto;
-  padding-bottom: 56.25%; /* For a 16:9 aspect ratio */
+  width: 100%;
+  padding-bottom: 56.25%;
   overflow: hidden;
 }
 
@@ -196,103 +167,94 @@ footer {
   left: 0;
   width: 100%;
   height: auto;
-  /* max-height: 400px; */
-  object-fit: contain; /* Make the video maintain its aspect ratio while fitting within its container */
+  object-fit: contain;
 }
-.flex-item video {
-  width: 100%; /* Make the video take up the full width of its container */
-  height: auto; 
-  object-fit: contain; /* Make the video maintain its aspect ratio while fitting within its container */
-}
+
 .flex-item p {
   max-width: 100%;
-  overflow-wrap: break-word;
   word-wrap: break-word;
 }
+
 .work-experience {
   display: flex;
-  flex-direction: column; /* Change from row to column */
-  align-items: flex-start; /* Align items to the start (left) */
-  text-align: left; /* Ensure text aligns properly */
+  flex-direction: column;
+  align-items: flex-start;
   width: 85%;
-  gap: 20px; /* Add space between job entries */
+  gap: 20px;
 }
 
 .job {
-  width: 100%; /* Make each job entry take full width */
-  padding-left: 0; /* Remove left padding */
+  width: 100%;
+}
+
+.job h3, .job h4, .job h5 {
+  text-align: left;
 }
 
 .job h3 {
-  font-size: 1.3em; /* Adjust as needed */
-  margin-bottom: 0.5em; /* Adjust as needed */
-  text-align: left; /* Align the text to the left */
-  
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
 }
 
 .job h4 {
   font-style: italic;
-  font-size: 1.5 em;
-  margin-top: 0.5em; /* Adjust as needed */
-  margin-bottom: 0.5em; /* Adjust as needed */
-  text-align: left; /* Align the text to the left */
+  font-size: 1.5em;
+  margin: 0.5em 0;
 }
 
 .job h5 {
-  margin-top: 0.5em; /* Adjust as needed */
-  font-size: 1 em;
-  text-align: left; /* Align the text to the left */
+  font-size: 1em;
+  margin-top: 0.5em;
 }
 
 .job ul {
-  display: flex;
-  flex-direction: column;
-  list-style-type: disc; /* Use disc-style bullets */
+  display: block; 
+  list-style-type: disc; 
+  padding-left: 20px; 
+  text-align: left; 
 }
 .job li {
-  display: list-item; /* Ensure list items appear on their own line */
-  text-align: left; /* Align the text to the left */
-  padding-left: 1em; /* Adjust as needed */
-  font-size: 1em; /* Adjust as needed */
+  display: list-item; 
+  text-align: left; 
+  padding-left: 0; 
+  font-size: 1em;
 }
+
 .job ul li {
-  margin-bottom: 1em; /* Adjust as needed */
+  margin-bottom: 1em;
 }
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Ensure the coursework section uses flexbox and wraps items */
 #relevant-coursework ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Center the items when wrapping */
-  gap: 15px; /* Add space between buttons */
+  justify-content: center;
+  gap: 15px;
   padding: 0;
   list-style: none;
 }
 
-/* Make each list item flexible with a max width */
 #relevant-coursework li {
-  flex: 1 1 300px; /* Flexible size but won't shrink too much */
-  max-width: 300px; /* Prevents it from stretching too wide */
+  flex: 1 1 300px;
+  max-width: 300px;
 }
 
-/* Ensure buttons fill their container */
 #relevant-coursework button {
-  width: 100%; /* Make buttons take full width of the container */
+  width: 100%;
   padding: 15px;
   text-align: center;
 }
 
-/* Responsive design: stack buttons below each other */
 @media (max-width: 768px) {
   #relevant-coursework ul {
-    flex-direction: column; /* Stack vertically */
-    align-items: center; /* Center the items */
+    flex-direction: column;
+    align-items: center;
   }
-
+  
   #relevant-coursework li {
-    max-width: 100%; /* Allow full width on smaller screens */
+    max-width: 100%;
   }
 }
